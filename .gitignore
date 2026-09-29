@@ -1,0 +1,5 @@
+*.csv
+*.joblib
+*.env
+*.DS_Store
+*.pyc
