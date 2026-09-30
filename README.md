@@ -20,6 +20,7 @@ The model was validated against the **Habitable Worlds Catalog (HWC)** from the 
 - **Precision@5:** **80.00%** (4/5 top candidates matched: *K2-18 b, TRAPPIST-1 g, Wolf 1061 c, Wolf 1069 b*)
 - **Precision@10:** **60.00%**
 - **Precision@20:** **50.00%**
-##Further Reading
+
+## Further Reading
 
 For a more in-depth discussion of the evaluation methods used to determine this optimal model architecture, an explanation of the problems encountered (such as severe class imbalance and theoretical metric limitations), and a full list of scientific references used, please see the attached [Project Report](Project%20Report.pdf).
