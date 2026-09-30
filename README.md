@@ -8,16 +8,18 @@ A machine learning application that predicts and prioritizes exoplanet habitabil
 With over 6,000 confirmed exoplanets discovered, analyzing each candidate manually is resource-intensive due to incomplete datasets and extreme class imbalance (~1% habitable candidates). 
 
 This project tackles class imbalance by implementing a **Two-Hurdle Machine Learning Model** based on John Cragg's statistical approach:
-1. **Hurdle 1 (Filtering):** An **XGBoost Classifier** determines whether an exoplanet resides within its star's Habitable Zone (HZ) using Kopparapu et al. boundary equations.
-2. **Hurdle 2 (Scoring):** A **Random Forest Regressor** predicts the Earth Similarity Index (ESI) score based on physical characteristics (radius, bulk density, escape velocity, surface temperature).
-3. **Final Prioritization:** Outputs an **Overall Habitability Score** ($\text{HZ Probability} \times \text{Predicted ESI}$) to deliver a prioritized ranking for astronomical target follow-ups.
+1. **Hurdle 1 (Filtering):** An XGBoost Classifier determines whether an exoplanet resides within its star's Habitable Zone (HZ) using Kopparapu et al. boundary equations.
+2. **Hurdle 2 (Scoring):** A Random Forest Regressor predicts the Earth Similarity Index (ESI) score based on physical characteristics (radius, bulk density, escape velocity, surface temperature).
+3. **Final Prioritization:** Outputs an Overall Habitability Score (HZ Probability * Predicted ESI) to deliver a prioritized ranking for astronomical target follow-ups.
+
+<img width="603" height="345" alt="image" src="https://github.com/user-attachments/assets/ba2fb368-8ccb-4c41-b5b5-06176ce877b4" />
 
 
 ## Model Performance & Metrics
 
 The model was validated against the **Habitable Worlds Catalog (HWC)** from the Planetary Habitability Laboratory (PHL):
 
-- **Precision@5:** **80.00%** (4/5 top candidates matched: *K2-18 b, TRAPPIST-1 g, Wolf 1061 c, Wolf 1069 b*)
+- **Precision@5:** **80.00%** (4/5 top candidates matched)
 - **Precision@10:** **60.00%**
 - **Precision@20:** **50.00%**
 
